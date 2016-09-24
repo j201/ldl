@@ -24,11 +24,11 @@ static LV2_Handle instantiate(
 }
 
 static void connect_port(LV2_Handle inst, uint32_t port, void* data) {
-	LDL* ldl = (LDL*)instance;
+	LDL* ldl = (LDL*)inst;
 
 	switch ((Port)port) {
 	case INPUT:
-		ldl->input = (const float*)input;
+		ldl->input = (const float*)data;
 		break;
 	case OUTPUT:
 		ldl->output = (float*)data;
