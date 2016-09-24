@@ -43,7 +43,8 @@ static void run(LV2_Handle inst, uint32_t nsamp) {
 	const LDL* ldl = (const LDL*)inst;
 
 	for (int i = 0; i < nsamp; i++) {
-		ldl->output[i] = ldl->input[i];
+		float in = ldl->input[i];
+		ldl->output[i] = in > 0 ? in : -in;
 	}
 }
 

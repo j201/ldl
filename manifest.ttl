@@ -3,6 +3,6 @@
 
 <http://j201.github.io/plugins/ldl>
 	a lv2:Plugin ;
-	lv2:binary <ldl@LIB_EXT@>  ;
+	lv2:binary <ldl.so>  ;
 	rdfs:seeAlso <ldl.ttl> .
 
